@@ -1,0 +1,105 @@
+/*Секция отзывов*/
+.reviews {
+    width: 100%;
+    height: auto;
+    background-color: var(--bg);
+    padding: var(--section-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.reviews_list {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    overflow:visible;
+}
+
+.reviewcard {
+    background-color: var(--white);
+    border-radius: var(--default-rounding);
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    height: 266px;
+    min-width: 432px;
+    gap: 24px;
+}
+
+.reviewcard_content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.reviewcard_stars {
+    display: flex;
+}
+.reviewcard_stars .star {
+    font-size: 20px;
+    color: var(--black);
+}
+
+.reviewcard_footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.reviewcard_avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.reviewcard_author {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.reviewcard_name {
+    font-family: var(--sentient);
+    font-size: 24px;
+    font-weight: 300;
+    align-items: center;
+}
+
+.reviewcard_city {
+    font-size: 12px;
+    color: var(--black);
+    align-items: center;
+}
+
+.reviews_arrows {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 32px; 
+}
+
+.arrow {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--white);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.arrow:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}

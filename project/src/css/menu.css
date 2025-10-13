@@ -1,0 +1,96 @@
+/*Рекламный баннер*/
+.banner {
+    height: 40px;
+    width: 100%;
+    background: #ABB249;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.close_btn {
+    position: absolute;
+    right: 40px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+/*Фон, меню + промо */
+.main_block {
+    width:100% ;
+    background-color: #DD6249;
+    background-image: url('../images/home_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 768px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 24px;
+}
+
+/* меню*/
+.header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1360px;
+    height: 58px;
+    background: var(--white);
+    border-radius: 80px;
+    padding: 17px 40px;
+}
+
+.menu_ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 24px;
+}
+
+.menu_left {
+    justify-content: flex-start;
+}
+
+.menu_right {
+    justify-content: flex-end;
+}
+
+.menu_cart_btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease;
+}
+
+.menu_cart_btn:hover {
+    transform: scale(1.1);
+}
+
+.menu_cart_btn img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
+}
+
+.menu_logo {
+    height: 25px;
+    width: 142px;
+    object-fit: contain;
+}

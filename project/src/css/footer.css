@@ -1,0 +1,156 @@
+/*Секция с контактами*/
+.contactbanner {
+    width: 100%;
+    background-color: var(--bg);
+    padding: var(--section-padding);
+    display: flex;
+    justify-content: center;
+}
+.contactbanner_container {
+    background-color: var(--red);
+    color: var(--white);
+    border-radius: var(--default-rounding);
+    width: 100%;
+    padding: 80px 80px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 80px; 
+    min-width: 1360px;
+}
+
+.contactbanner_toprow {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    gap: 100px;
+}
+
+.contactbanner_leftpart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.contactbanner_rightpart {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.contactbanner_colrow{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+.contactbanner_flower {
+    display: flex;
+    width: 44px;
+    height: 44px;
+}
+
+.contactbanner_email{
+    display: flex; 
+    flex-direction: column;
+    gap: 24px;
+}
+.contactbanner_form{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    min-width: 489px;
+    height: 41px;
+}
+
+.contactbanner_input{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    min-width: 489px;
+    height: 41px;
+    border: 1px solid var(--white);
+    border-radius: 32px;
+    background-color: transparent;
+    padding: 0 16px;       
+}
+.contactbanner_input::placeholder {
+    color: var(--white);
+    font-family: var(--manrope);
+    font-size: 16px;
+}
+
+.contactbanner_column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.contactbanner_colrow h4{
+    font-family: var(--sentientl);
+    font-size: 24px;
+}
+
+.contactbanner_bottomrow {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.contactbanner_column a {
+    display: block;
+    font-family: var(--manrope);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--black);
+    text-decoration: none;
+}
+
+.contactbanner_column a.paragraph_large {
+    font-family: var(--manrope);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--white);
+    text-decoration: none;
+    display: block;     
+}
+
+.contactbanner_column a.paragraph_large:hover {
+    text-decoration: underline; 
+}
+
+.button_white {
+    background-color: var(--white);
+    font-family: var(--manrope);
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 32px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 115px;
+    text-align: center;
+    border: none; 
+}
+
+.button_white:hover {
+    background-color: var(--hover);
+    transform: translateY(-2px);
+}
+
+.hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    border: 0;
+    white-space: nowrap;
+}

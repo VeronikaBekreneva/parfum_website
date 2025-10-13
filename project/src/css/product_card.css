@@ -1,0 +1,109 @@
+/* Карточка */
+.card {
+    overflow: hidden;
+    width: 316px;
+    min-height: 563px; 
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card_image {
+    width: 316px;
+    height: 421px;
+    object-fit: cover;
+    border-radius: var(--default-rounding);
+}
+
+.card_content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.card_title {
+    font-family: var(--sentient);
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.card_price{
+    font-family: var(--manrope);
+    font-size: 14px;
+    color: var(--black);
+    text-align: center;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    border-radius: var(--default-rounding);
+    overflow: hidden;
+}
+
+.badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 89px;
+    height: 33px;    
+    background-color: var(--orange);
+    color: var(--black);
+    font-family: var(--manrope);
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 8px 16px;
+    border-radius: 999px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+.no {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 89px;
+    height: 33px;    
+    background-color: transparent;
+    color: transparent;
+    font-family: var(--manrope);
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 8px 16px;
+    border-radius: 999px;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+.card_btn {
+    align-self: center;
+    border: none;
+    border-radius: 32px;
+    background-color: var(--green);
+    color: var(--black);
+    font-family: var(--manrope);
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 316px;
+    height: 41px;
+    padding: 12px 24PX;
+}
+
+.card_btn:hover,
+.tocart_button:hover {
+    background-color: var(--darkhover);
+}
