@@ -1,3 +1,23 @@
+.catalogue{
+    background-color: var(--bg);
+    padding: var(--section-padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+}
+
+/* Контейнер карточек */
+.product_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+        width: 100%;
+}
+
 /* Карточка */
 .card {
     overflow: hidden;
@@ -85,25 +105,4 @@
     display: flex;
     align-items: center;
     justify-content: center;   
-}
-.card_btn {
-    align-self: center;
-    border: none;
-    border-radius: 32px;
-    background-color: var(--green);
-    color: var(--black);
-    font-family: var(--manrope);
-    font-weight: 700;
-    font-size: 12px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: 0.3s;
-    width: 316px;
-    height: 41px;
-    padding: 12px 24PX;
-}
-
-.card_btn:hover,
-.tocart_button:hover {
-    background-color: var(--darkhover);
 }

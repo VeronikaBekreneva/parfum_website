@@ -20,12 +20,24 @@
 /*Фон, меню + промо */
 .main_block {
     width:100% ;
-    background-color: #DD6249;
+    background-color: var(--bg);
     background-image: url('../images/home_bg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 768px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 24px;
+}
+
+.main_block_wo_img {
+    width: 100%;
+    background-color: var(--bg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -93,4 +105,11 @@
     height: 25px;
     width: 142px;
     object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+    .menu {
+        max-width: 90%;
+        padding: 0 20px;
+    }
 }

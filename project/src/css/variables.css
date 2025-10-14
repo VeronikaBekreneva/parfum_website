@@ -1,0 +1,21 @@
+:root {
+    /* Colors */
+    --bg: #FFF0F7;
+    --green: #ABB249;
+    --orange: #E8A94C;
+    --white: #ffffff;
+    --black: #000000;
+    --red: #DD6249;
+    --hover: #e5e5e5;
+    --darkhover: #7F833F;
+    --mediumhover:#aa6384;
+
+    /* Fonts */
+    --sentient: 'Sentient', serif;
+    --sentientl: 'Sentient-Light', serif;
+    --manrope: 'Manrope', sans-serif;
+
+    /* Padding */
+    --section-padding: 80px 40px;
+    --default-rounding: 16px 
+}

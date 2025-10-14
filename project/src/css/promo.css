@@ -1,0 +1,95 @@
+/*промо текст в main block */
+.promo_text {
+    font-family: var(--sentient);
+    font-weight: 100;
+    font-size: 80px;
+    color: var(--white);
+    text-align: center;
+    line-height: 1;
+    margin-top: 150px;
+    gap: 24px;
+}
+
+.promo_text .italic {
+    font-style: italic;
+    font-weight: 400;
+}
+
+/*Промо*/
+.promo2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 56px;
+    background-color: var(--bg);
+    padding: var(--section-padding);
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.promo2_image {
+    width: 100%;
+    max-width: 664px;
+    height: auto;
+    border-radius: var(--default-rounding);
+    object-fit: cover;
+    box-shadow: 0 4px 7px rgba(0,0,0,0.1);
+}
+
+.promo2_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    gap: 24px;
+    width: 100%;
+    max-width: 368px;
+}
+
+.promo2_description {
+    font-family: var(--manrope);
+    font-size: 16px;
+    color: var(--black);
+    line-height: 1.4;
+    text-align: center;
+    width: 100%;
+}
+
+.promo2 .card_btn {
+    align-self: center;
+    width: 100%;
+    max-width: 368px;
+}
+
+@media (max-width: 992px) {
+    .promo2 {
+        gap: 32px;
+        padding: 60px 20px;
+    }
+    .promo2_title {
+        font-size: 32px;
+        text-align: center;
+    }
+    .promo2_description {
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .promo2 {
+        flex-direction: column;
+        gap: 24px;
+        padding: 40px 16px;
+    }
+    .promo2_title {
+        font-size: 24px;
+    }
+    .promo2_description {
+        font-size: 14px;
+    }
+    .promo2 .card_btn {
+        width: 100%;
+    }
+}

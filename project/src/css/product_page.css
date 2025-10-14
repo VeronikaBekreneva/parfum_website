@@ -1,110 +1,102 @@
 /*Страница продукта*/
-.product_block{
+.product_block {
     width: 100%;
-    height: fit-content;
     display: flex;
     flex-direction: row;
-    justify-content:center;
+    justify-content: center;
     align-items: flex-start;
     padding: var(--section-padding);
     gap: 52px;
     background-color: var(--bg);
-
+    flex-wrap: wrap;
 }
 
-.product_photo{
-    width: fit-content;
+.product_photo {
     display: flex;
     flex-direction: column;
     gap: 24px;
-}
-.product_photo img{
-    width: 664px;
-    height: auto;
+    width: 100%;
+    max-width: 664px;
 }
 
-.product_info{
+.product_photo img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--default-rounding);
+}
+
+.product_info {
     display: flex;
     flex-direction: column;
-    width: fit-content;
     gap: 32px;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    max-width: 368px;
 }
-.main_info{
+
+.main_info {
     display: flex;
     flex-direction: column;
     gap: 32px;
-    max-width: 368px;
+    width: 100%;
 }
-.product_quick_info{
+
+.product_quick_info {
     display: flex;
     flex-direction: row;
-    gap: auto;
     justify-content: space-between;
+    width: 100%;
+    gap: 16px;
 }
-.availability_soldout{
+
+.availability_soldout {
     font-family: var(--manrope);
     font-size: 12px;
     font-weight: 700;
     color: var(--red);
     border-radius: var(--default-rounding);
     text-transform: uppercase;
-    height: 33px;
-    width: fit-content;
-    background-color: transparent;
-    border: 1px solid;
+    padding: 8px 16px;
     display: flex;
-    flex-direction: row;
     align-items: center;
     gap: 8px;
-    padding: 8px 16px;
+    background-color: transparent;
+    border: 1px solid;
+    height: fit-content;
+    width: fit-content;
 }
-.circle_icon{
+
+.circle_icon {
     font-size: smaller;
 }
 
-.product_quantity{
+.product_quantity {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 8px;
 }
 
-.quantity{
+.quantity {
     font-family: var(--manrope);
     font-size: 16px;
     font-weight: 400;
-    line-height: 1.4px;
+    line-height: 1.4;
     color: var(--black);
-    width: fit-content;
-    height: 40px;
     min-width: 63px;
+    height: 40px;
     border-radius: var(--default-rounding);
     background-color: transparent;
     border: 1px solid;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.tocart_button {
-    align-self: center;
-    border: none;
-    border-radius: 32px;
-    background-color: var(--green);
-    color: var(--black);
-    font-family: var(--manrope);
-    font-weight: 700;
-    font-size: 12px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: 0.3s;
-    width: 316px;
-    height: 41px;
-    padding: 12px 24PX;
+    padding: 0 8px;
 }
 
-.product_notes{
+.product_notes,
+.product_ingredients {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -112,11 +104,11 @@
     gap: 16px;
     padding: 16px;
     border-radius: 4px;
-    height: fit-content;
+    width: 100%;
     background-color: var(--white);
 }
 
-.plus{
+.plus {
     width: 24px;
     height: 24px;
     border-radius: 20px;
@@ -131,22 +123,35 @@
     transform: scale(1.1);
     background-color: var(--mediumhover);
 }
-.plus_icon{
+
+.plus_icon {
     font-size: medium;
 }
 
-.product_ingredients{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-    padding: 16px;
-    border-radius: 4px;
-    height: fit-content;
-    background-color: var(--white);
+@media (max-width: 992px) {
+    .product_block {
+        gap: 32px;
+        padding: 60px 20px;
+    }
+    .product_info {
+        max-width: 100%;
+        align-items: center;
+    }
+    .main_info {
+        max-width: 100%;
+    }
 }
 
+@media (max-width: 600px) {
+    .product_block {
+        flex-direction: column;
+        gap: 24px;
+        padding: 40px 16px;
+    }
+    .tocart_button {
+        max-width: 100%;
+    }
+}
 
 /*Секция с преуимуществами продукции*/
 .product_advantages{

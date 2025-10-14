@@ -1,0 +1,86 @@
+.button {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 12px 40px;
+    background-color: var(--white);
+    color: var(--black);
+    border: none;
+    border-radius: 32px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--manrope);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--hover);
+    transform: translateY(-2px);
+}
+
+.card_btn {
+    align-self: center;
+    border: none;
+    border-radius: 32px;
+    background-color: var(--green);
+    color: var(--black);
+    font-family: var(--manrope);
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 316px;
+    height: 41px;
+    padding: 12px 24PX;
+}
+
+.tocart_button {
+    align-self: center;
+    border: none;
+    border-radius: 32px;
+    background-color: var(--green);
+    color: var(--black);
+    font-family: var(--manrope);
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    max-width: 316px;
+    height: 41px;
+    padding: 12px 24px;
+}
+
+.card_btn:hover,
+.tocart_button:hover {
+    background-color: var(--darkhover);
+}
+
+.button_white {
+    background-color: var(--white);
+    font-family: var(--manrope);
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 32px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 115px;
+    height: 41px;
+    text-align: center;
+    border: none; 
+    color: var(--black);
+}
+
+.button_white:hover {
+    background-color: var(--hover);
+    transform: translateY(-2px);
+}
+
