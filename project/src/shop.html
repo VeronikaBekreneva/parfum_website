@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/product_page.css">
     <link rel="stylesheet" href="css/catalog.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -28,17 +29,17 @@
     </section>
     <section class="section_block">
         <header class="header">
-            <nav class="menu">
+            <nav class="menu desktop-menu">
                 <ul class="menu_ul menu_left">
                     <li><a class="accent_text" href="shop.html">shop</a></li>
-                    <li><a class="accent_text" href="#">about</a></li>
+                    <li><a class="accent_text about-link" href="#">about</a></li>
                 </ul>
                 <a class="menu_logo" href="index.html">
                     <img src="images/logo.png" alt="Parfum logo">
-                </a>
+                </a>                
                 <ul class="menu_ul menu_right">
                     <li><a class="accent_text" href="#">blog</a></li>
-                    <li><a class="accent_text" href="#">contact</a></li>
+                    <li><a href="#" class="accent_text contact-link">contact</a></li>
                     <li>
                         <button class="menu_cart_btn" aria-label="Open cart">
                             <img src="images/cart.png" alt="Cart icon">
@@ -46,6 +47,26 @@
                     </li>
                 </ul>
             </nav>
+            <div class="mobile-burger-container">
+                <button class="mobile-burger" aria-label="Open mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        <nav class="mobile-menu">
+            <div class="mobile-menu-header">
+                <img src="images/logo.png" alt="Logo" class="mobile-menu-logo">
+                <button class="mobile-menu-close">✕</button>
+            </div>
+            <ul>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-overlay"></div>
         </header>
         <h1 class="tab_title">
             All <span class="italic"> fragrances</span>.
@@ -56,78 +77,78 @@
             <div class="product_list">
                 <div class="card">
                     <div class="badge">On Sale</div>
-                    <img src="images/meadow.png" alt="Fragrance 1" class="card_image">
+                    <img src="images/meadow.png" alt="Meadow" class="card_image">
                     <div class="card_content">
                         <h2 class="card_title">Meadow</h2>
                         <div class="accent_text">BREEZY & JOYFUL</div>
                         <div class="card_price">$39.95</div>
                     </div>
-                    <button class="card_btn" onclick="window.location.href='product.html'">SHOP NOW</button>
+                    <a href="product.html?id=1" class="card_btn shop_now_btn">SHOP NOW</a>
                 </div>
                 <div class="card">
                     <div class="badge no">On Sale</div>
-                    <img src="images/Jardinea.png" alt="Fragrance 2" class="card_image">
+                    <img src="images/Jardinea.png" alt="Jardinea" class="card_image">
                     <div class="card_content">
                         <h2 class="card_title">Jardinea</h2>
                         <div class="accent_text">STRONGLY FLORAL</div>
                         <div class="card_price">$39.95</div>
                     </div>
-                    <button class="card_btn">SHOP NOW</button>
+                    <a href="product.html?id=2" class="card_btn shop_now_btn">SHOP NOW</a>
                 </div>
                 <div class="card">
                     <div class="badge">On Sale</div>
-                    <img src="images/lavanda.png" alt="Fragrance 3" class="card_image">
+                    <img src="images/lavanda.png" alt="Lavanda" class="card_image">
                     <div class="card_content">
                         <h2 class="card_title">Lavanda</h2>
-                        <div class="accent_text">calming</div>
+                        <div class="accent_text">CALMING</div>
                         <div class="card_price">$39.95</div>
                     </div>
-                    <button class="card_btn">SHOP NOW</button>
+                    <a href="product.html?id=3" class="card_btn shop_now_btn">SHOP NOW</a>
                 </div>
                 <div class="card">
                     <div class="badge no">On Sale</div>
-                    <img src="images/neroli.png" alt="Fragrance 4" class="card_image">
+                    <img src="images/neroli.png" alt="Neroli" class="card_image">
                     <div class="card_content">
                         <h2 class="card_title">Neroli</h2>
                         <div class="accent_text">DEEP & SWEET</div>
                         <div class="card_price">$39.95</div>
                     </div>
-                    <button class="card_btn">SHOP NOW</button>
+                    <a href="product.html?id=4" class="card_btn shop_now_btn">SHOP NOW</a>
                 </div>
                 <div class="card">
                     <div class="badge no">On Sale</div>
-                    <img src="images/spritz.png" alt="Fragrance 5" class="card_image">
+                    <img src="images/spritz.png" alt="Spritz" class="card_image">
                     <div class="card_content">
                         <h2 class="card_title">Spritz</h2>
                         <div class="accent_text">FRUITY & LIGHT</div>
                         <div class="card_price">$39.95</div>
                     </div>
-                    <button class="card_btn">SHOP NOW</button>   
-                </div>      
+                    <a href="product.html?id=5" class="card_btn shop_now_btn">SHOP NOW</a>
+                </div>
                 <div class="card">
                     <div class="badge no">On Sale</div>
-                    <img src="images/powder.png" alt="Fragrance 6" class="card_image">
-                        <div class="card_content">
-                            <h2 class="card_title">Powder</h2>
-                            <div class="accent_text">ultra clean</div>
-                            <div class="card_price">$39.95</div>
-                        </div>
-                    <button class="card_btn">SHOP NOW</button>
+                    <img src="images/powder.png" alt="Powder" class="card_image">
+                    <div class="card_content">
+                        <h2 class="card_title">Powder</h2>
+                        <div class="accent_text">ULTRA CLEAN</div>
+                        <div class="card_price">$39.95</div>
+                    </div>
+                    <a href="product.html?id=6" class="card_btn shop_now_btn">SHOP NOW</a>
                 </div>
                 <div class="card">
                     <div class="badge">On Sale</div>
-                    <img src="images/citrus.png" alt="Fragrance 7" class="card_image">
-                        <div class="card_content">
-                            <h2 class="card_title">Citrus</h2>
-                            <div class="accent_text">tangy</div>
-                            <div class="card_price">$39.95</div>
-                        </div>
-                    <button class="card_btn">SHOP NOW</button>
+                    <img src="images/citrus.png" alt="Citrus" class="card_image">
+                    <div class="card_content">
+                        <h2 class="card_title">Citrus</h2>
+                        <div class="accent_text">TANGY</div>
+                        <div class="card_price">$39.95</div>
+                    </div>
+                    <a href="product.html?id=7" class="card_btn shop_now_btn">SHOP NOW</a>
                 </div>
             </div>
         </section>
     </main>
-        <footer class="contactbanner">
+    <footer class="contactbanner" id="contact">
         <div class="contactbanner_container">
             <div class="contactbanner_toprow">
                 <div class="contactbanner_leftpart">
@@ -178,5 +199,19 @@
             </div>
         </div>
     </footer>
+    <div id="cart-overlay" class="cart-overlay hidden"></div>
+    <div id="cart-modal" class="cart-modal hidden">
+        <h2>Cart</h2>
+        <div id="cart-items"></div>
+        <div class="cart-total">
+            Total: <span id="cart-total-price">$0.00</span>
+        </div>
+        <button id="cart-checkout" style="display:none">Checkout</button>
+        <div class="cart-lavender" role="img" aria-label="Lavender field banner"></div>
+        <button id="close-cart" class="cart-close-btn" aria-label="Close cart">
+            <span class="material-icons">close</span>
+        </button>
+    </div>
+    <script type="module" src="../js/main.js"></script>
 </body>
 </html>

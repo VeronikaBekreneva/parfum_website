@@ -1,4 +1,4 @@
-.catalogue{
+.catalogue {
     background-color: var(--bg);
     padding: var(--section-padding);
     display: flex;
@@ -15,7 +15,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 32px;
-        width: 100%;
+    width: 100%;
 }
 
 /* Карточка */
@@ -26,6 +26,10 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
 }
 
 .card_image {
@@ -33,6 +37,7 @@
     height: 421px;
     object-fit: cover;
     border-radius: var(--default-rounding);
+    transition: transform 0.3s ease;
 }
 
 .card_content {
@@ -51,20 +56,13 @@
     line-height: 1;
 }
 
-.card_price{
+.card_price {
     font-family: var(--manrope);
     font-size: 14px;
     color: var(--black);
-    text-align: center;
-    align-items: center;
 }
 
-.card {
-    position: relative;
-    border-radius: var(--default-rounding);
-    overflow: hidden;
-}
-
+/* Badge */
 .badge {
     position: absolute;
     top: 12px;
@@ -87,22 +85,22 @@
 }
 
 .no {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    width: 89px;
-    height: 33px;    
     background-color: transparent;
     color: transparent;
-    font-family: var(--manrope);
-    font-weight: 700;
-    font-size: 12px;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 8px 16px;
-    border-radius: 999px;
     box-shadow: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;   
+}
+
+.product_list .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    background-color: rgba(230, 251, 255, 0.3);
+}
+
+.product_list .card .card_btn {
+    transition: all 0.3s ease;
+}
+
+.product_list .card:hover .card_btn {
+    transform: translateY(-3px); 
+    background-color: var(--darkhover);
 }

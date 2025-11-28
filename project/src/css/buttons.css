@@ -22,7 +22,10 @@
 }
 
 .card_btn {
-    align-self: center;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-decoration: none;
     border: none;
     border-radius: 32px;
     background-color: var(--green);
@@ -33,13 +36,16 @@
     text-transform: uppercase;
     cursor: pointer;
     transition: 0.3s;
-    width: 316px;
+    width: 100%;
+    max-width: 316px;
     height: 41px;
-    padding: 12px 24PX;
+    padding: 12px 24px;
 }
 
 .tocart_button {
     align-self: center;
+    align-items: center;
+    text-decoration: none;
     border: none;
     border-radius: 32px;
     background-color: var(--green);

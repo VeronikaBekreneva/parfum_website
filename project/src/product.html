@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/product_page.css">
     <link rel="stylesheet" href="css/catalog.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -28,26 +29,48 @@
     </section>
     <section class="main_block_wo_img">
         <header class="header">
-            <nav class="menu">
+            <nav class="menu desktop-menu">
                 <ul class="menu_ul menu_left">
                     <li><a class="accent_text" href="shop.html">shop</a></li>
-                    <li><a class="accent_text" href="#">about</a></li>
+                    <li><a class="accent_text about-link" href="#">about</a></li>
                 </ul>
                 <a class="menu_logo" href="index.html">
                     <img src="images/logo.png" alt="Parfum logo">
                 </a>                
                 <ul class="menu_ul menu_right">
                     <li><a class="accent_text" href="#">blog</a></li>
-                    <li><a class="accent_text" href="#">contact</a></li>
+                    <li><a href="#" class="accent_text contact-link">contact</a></li>
                     <li>
-                        <button class="menu_cart_btn" aria-label="Open cart">
-                            <img src="images/cart.png" alt="Cart icon">
+                        <button class="menu_cart_btn" aria-label="pen cart">
+                            <img src="images/cart.png" alt="cart icon">
                         </button>
                     </li>
                 </ul>
             </nav>
+            <div class="mobile-burger-container">
+                <button class="mobile-burger" aria-label="Open mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <button class="menu_cart_btn mobile-cart-btn" aria-label="Open cart">
+                    <img src="images/cart.png" alt="Cart icon">
+                </button>
+            </div>
+        <nav class="mobile-menu">
+            <div class="mobile-menu-header">
+                <img src="images/logo.png" alt="Logo" class="mobile-menu-logo">
+                <button class="mobile-menu-close" aria-label="Close menu">✕</button>
+            </div>
+            <ul>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-overlay"></div>
         </header>
-    </section>
     <main>
         <section class="product_block">
             <div class="product_photo">
@@ -56,63 +79,77 @@
             </div>
             <div class="product_info">
                 <div class="main_info">
-                    <h1 class="h1">Meadow</h1>
+                    <h1 class="h1"></h1>
                     <div class="product_quick_info">
-                        <a class="accent_text">AIRY & JOYFUL</a>
-                        <a class="paragraph_large">$39.95</a>
+                        <a class="accent_text"></a>
+                        <a class="paragraph_large"></a>
                     </div>
-                <div class="paragraph_large">Captures the essence of a carefree breeze through wildflower fields, evoking pure joy with its light and refreshing notes.</div>
+                <div class="paragraph_large product_desc"></div>
                 <div class="availability_soldout">
                     <span class="material-icons circle_icon">circle</span>
-                    <a>sold out!</a> 
+                    <a></a> 
                 </div>
                 <div class="product_quantity">
                     <a class="accent_text">qty</a>
                     <div class="quantity">
-                        <a>1</a>
+                        <a></a>
                     </div>
                 </div>
-                <button class="tocart_button">add to cart</button>
-                <div class="product_notes">
-                    <a class="accent_text">scent notes</a>
-                    <button class="plus"><span class="material-icons plus_icon">add</span></button>
+                <button class="tocart_button" data-product-id="0">
+                    <span class="tocart-content">Add to cart</span>
+                </button>
+                <div class="product_notes collapsible">
+                    <div class="collapsible-header">
+                        <span class="accent_text">scent notes</span>
+                        <button class="plus"><span class="material-icons plus_icon">add</span></button>
+                    </div>
+                    <div class="collapsible-body">
+                        <p class="notes_text"></p>
+                    </div>
                 </div>
-                <div class="product_ingredients">
-                    <a class="accent_text">ingredients</a>
-                    <button class="plus"><span class="material-icons plus_icon">add</span>
+                <div class="product_ingredients collapsible">
+                    <div class="collapsible-header">
+                        <span class="accent_text">ingredients</span>
+                        <button class="plus"><span class="material-icons plus_icon">add</span></button>
+                    </div>
+                    <div class="collapsible-body">
+                        <p class="ingredients_text"></p>
+                    </div>
+                </div>
+        </section>
+        <section class="product_advantages">
+            <h2 class="section_title">Unveiling creative <span class="italic">mastery</span>.</h2>
+            <div class="advantages_list">
+                <div class="advantage">
+                <div class="advantage_image">
+                    <img src="images/iconoir_test-tube small.png" alt="Craftsmanship icon">
+                </div>
+                <div class="accent_text">Artisanal Craftsmanship</div>
+                <div class="paragraph_large">
+                    Our fragrances are meticulously crafted by skilled artisans who blend science with creativity. Every note is carefully chosen and combined, resulting in captivating scents.
+                </div>
+                </div>
+                <div class="advantage">
+                <div class="advantage_image">
+                    <img src="images/iconoir_flower medium.png" alt="Scent Journey icon">
+                </div>
+                <div class="accent_text">Scent Journey Innovation</div>
+                <div class="paragraph_large">
+                    Our fragrances take you on a dynamic scent journey. As the day unfolds, our perfumes reveal different facets, adapting to your body chemistry and surroundings.
+                </div>
+                </div>
+                <div class="advantage">
+                <div class="advantage_image">
+                    <img src="images/iconoir_flower small.png" alt="Inspired by Nature icon">
+                </div>
+                <div class="accent_text">Inspired by Nature</div>
+                <div class="paragraph_large">
+                    Our fragrances are born from nature's palette, capturing the essence of blooming flowers, lush landscapes, and serene moments. We draw inspiration from the beauty around us.
+                </div>
                 </div>
             </div>
         </section>
-        <section class="product_advantages">
-        <h2 class="section_title">Unveiling creative <span class="italic">mastery</span>.</h2>
-        <div class="advantages_list">
-            <div class="advantage">
-            <div class="advantage_image">
-                <img src="images/iconoir_test-tube small.png" alt="Craftsmanship icon">
-            </div>
-            <div class="accent_text">Artisanal Craftsmanship</div>
-            <div class="paragraph_large">
-                Our fragrances are meticulously crafted by skilled artisans who blend science with creativity. Every note is carefully chosen and combined, resulting in captivating scents.
-            </div>
-            </div>
-            <div class="advantage">
-            <div class="advantage_image">
-                <img src="images/iconoir_flower medium.png" alt="Scent Journey icon">
-            </div>
-            <div class="accent_text">Scent Journey Innovation</div>
-            <div class="paragraph_large">
-                Our fragrances take you on a dynamic scent journey. As the day unfolds, our perfumes reveal different facets, adapting to your body chemistry and surroundings.
-            </div>
-            </div>
-            <div class="advantage">
-            <div class="advantage_image">
-                <img src="images/iconoir_flower small.png" alt="Inspired by Nature icon">
-            </div>
-            <div class="accent_text">Inspired by Nature</div>
-            <div class="paragraph_large">
-                Our fragrances are born from nature's palette, capturing the essence of blooming flowers, lush landscapes, and serene moments. We draw inspiration from the beauty around us.
-            </div>
-            </div>
+        </div>
         </div>
         </section>
         <section class="promo2">
@@ -134,48 +171,48 @@
             <div class="product_list">
                 <div class="card">
                     <div class="badge no">On Sale</div>
-                    <img src="images/Jardinea.png" alt="Fragrance 1" class="card_image">
+                    <img src="images/Jardinea.png" alt="Jardinea" class="card_image">
                     <div class="card_content">
-                        <div class="card_title">Jardinea</div>
+                        <h2 class="card_title">Jardinea</h2>
                         <div class="accent_text">STRONGLY FLORAL</div>
                         <div class="card_price">$39.95</div>
                     </div>
-                    <button class="card_btn">SHOP NOW</button>
+                    <a href="product.html?id=2" class="card_btn shop_now_btn">SHOP NOW</a>
                 </div>
                 <div class="card">
                     <div class="badge">On Sale</div>
-                    <img src="images/lavanda.png" alt="Fragrance 2" class="card_image">
+                    <img src="images/lavanda.png" alt="Lavanda" class="card_image">
                     <div class="card_content">
-                        <div class="card_title">Lavanda</div>
-                        <div class="accent_text">calming</div>
+                        <h2 class="card_title">Lavanda</h2>
+                        <div class="accent_text">CALMING</div>
                         <div class="card_price">$39.95</div>
                     </div>
-                    <button class="card_btn">SHOP NOW</button>
+                    <a href="product.html?id=3" class="card_btn shop_now_btn">SHOP NOW</a>
                 </div>
                 <div class="card">
                     <div class="badge no">On Sale</div>
-                    <img src="images/neroli.png" alt="Fragrance 3" class="card_image">
+                    <img src="images/neroli.png" alt="Neroli" class="card_image">
                     <div class="card_content">
-                        <div class="card_title">Neroli</div>
+                        <h2 class="card_title">Neroli</h2>
                         <div class="accent_text">DEEP & SWEET</div>
                         <div class="card_price">$39.95</div>
-                        </div>
-                    <button class="card_btn">SHOP NOW</button>
+                    </div>
+                    <a href="product.html?id=4" class="card_btn shop_now_btn">SHOP NOW</a>
                 </div>
                 <div class="card">
                     <div class="badge no">On Sale</div>
-                    <img src="images/spritz.png" alt="Fragrance 4" class="card_image">
+                    <img src="images/spritz.png" alt="Spritz" class="card_image">
                     <div class="card_content">
-                        <div class="card_title">Spritz</div>
-                        <div class="accent_text">AIRY & JOYFUL</div>
+                        <h2 class="card_title">Spritz</h2>
+                        <div class="accent_text">FRUITY & LIGHT</div>
                         <div class="card_price">$39.95</div>
                     </div>
-                    <button class="card_btn">SHOP NOW</button>
+                    <a href="product.html?id=5" class="card_btn shop_now_btn">SHOP NOW</a>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="contactbanner">
+    <footer class="contactbanner" id="contact">
         <div class="contactbanner_container">
             <div class="contactbanner_toprow">
                 <div class="contactbanner_leftpart">
@@ -226,5 +263,19 @@
             </div>
         </div>
     </footer>
+    <div id="cart-overlay" class="cart-overlay hidden"></div>
+    <div id="cart-modal" class="cart-modal hidden">
+        <h2>Cart</h2>
+        <div id="cart-items"></div>
+        <div class="cart-total">
+            Total: <span id="cart-total-price">$0.00</span>
+        </div>
+        <button id="cart-checkout" style="display:none">Checkout</button>
+        <div class="cart-lavender" role="img" aria-label="Lavender field banner"></div>
+        <button id="close-cart" class="cart-close-btn" aria-label="Close cart">
+            <span class="material-icons">close</span>
+        </button>
+    </div>
+    <script type="module" src="../js/main.js"></script>
 </body>
 </html>

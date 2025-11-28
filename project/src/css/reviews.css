@@ -9,28 +9,35 @@
     gap: 40px;
 }
 
-/* Контейнер карточек отзывов */
+
 .reviews_list {
     display: flex;
-    flex-wrap: wrap;            
+    flex-wrap: nowrap; 
     gap: 32px;
     width: 100%;
-    max-width: 1200px;           
+    max-width: 1200px;
+    overflow-x: auto;        
+    scroll-behavior: smooth;
 }
 
-/* Карточка отзыва */
+.reviews_list::-webkit-scrollbar {
+    display: none;
+}
+
 .reviewcard {
     background-color: var(--white);
     border-radius: var(--default-rounding);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 32px;
-    min-width: 280px; 
-    flex: 1 1 300px;
-    gap: 24px;
+    padding: 24px;
+    min-width: 280px;
+    max-width: 320px;
+    flex: 0 0 auto;
+    gap: 16px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
+
 
 /* Содержимое карточки */
 .reviewcard_content {
@@ -54,11 +61,17 @@
 /* Нижняя часть карточки */
 .reviewcard_footer {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 12px;
-    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    margin-top: auto;
 }
+
+.reviewcard_author {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 
 .reviewcard_avatar {
     width: 48px;
@@ -126,3 +139,4 @@
         text-align: center;
     }
 }
+

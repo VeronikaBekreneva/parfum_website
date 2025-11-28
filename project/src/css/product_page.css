@@ -54,17 +54,27 @@
     font-family: var(--manrope);
     font-size: 12px;
     font-weight: 700;
-    color: var(--red);
-    border-radius: var(--default-rounding);
     text-transform: uppercase;
     padding: 8px 16px;
     display: flex;
     align-items: center;
     gap: 8px;
+    border-radius: var(--default-rounding);
     background-color: transparent;
     border: 1px solid;
     height: fit-content;
     width: fit-content;
+    transition: all 0.3s ease;
+}
+
+.availability_soldout.sold-out {
+    color: var(--red);
+    border-color: var(--red);
+}
+
+.availability_soldout.in-stock {
+    color: var(--green);
+    border-color: var(--green);
 }
 
 .circle_icon {
@@ -95,62 +105,145 @@
     padding: 0 8px;
 }
 
+.tocart_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 16px;
+
+    width: 100%;
+    max-width: 316px;
+    height: 41px;
+
+    border: none;
+    border-radius: 32px;
+    background-color: var(--green);
+    color: var(--black);
+
+    font-family: var(--manrope);
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tocart_button:hover {
+    background-color: var(--darkhover);
+}
+
+.tocart_button.in-cart {
+    background-color: var(--darkhover);
+    color: var(--white);
+}
+
+.tocart_button.in-cart .qty-btn {
+    background: none;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.tocart_button.in-cart .qty-btn.minus {
+    color: var(--white);
+}
+
+.tocart_button.in-cart .qty-btn.plus {
+    color: var(--white);
+}
+
+.tocart_button:disabled {
+    background-color: #ccc; /* серый фон */
+    color: #666; /* серый текст */
+    cursor: not-allowed; /* курсор “не доступно” */
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 16px;
+}
+
 .product_notes,
 .product_ingredients {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-    padding: 16px;
+    flex-direction: column;
     border-radius: 4px;
     width: 100%;
     background-color: var(--white);
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.note_line {
+    margin-bottom: 6px;
+}
+
+.note_line strong {
+    font-weight: 600;
+    color: #000;
+}
+.collapsible-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.collapsible-header .accent_text {
+    font-weight: 600;
+    font-size: 16px;
 }
 
 .plus {
     width: 24px;
     height: 24px;
     border-radius: 20px;
-    color: var(--black);
     background-color: var(--bg);
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.plus:hover {
-    transform: scale(1.1);
-    background-color: var(--mediumhover);
+    color: var(--black);
 }
 
 .plus_icon {
     font-size: medium;
+    transition: transform 0.3s ease;
 }
 
-@media (max-width: 992px) {
-    .product_block {
-        gap: 32px;
-        padding: 60px 20px;
-    }
-    .product_info {
-        max-width: 100%;
-        align-items: center;
-    }
-    .main_info {
-        max-width: 100%;
-    }
+.collapsible-body {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 16px;
+    transition: max-height 0.3s ease, padding 0.3s ease;
 }
 
-@media (max-width: 600px) {
-    .product_block {
-        flex-direction: column;
-        gap: 24px;
-        padding: 40px 16px;
-    }
-    .tocart_button {
-        max-width: 100%;
-    }
+.collapsible-body p {
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0;
+    padding-bottom: 16px;
+}
+
+.collapsible.active .collapsible-body {
+    max-height: 500px;
+    padding: 16px;
 }
 
 /*Секция с преуимуществами продукции*/
@@ -197,4 +290,29 @@
     left: 0;
     transform: translate(0, 0);
     display: block;
+}
+
+@media (max-width: 992px) {
+    .product_block {
+        gap: 32px;
+        padding: 60px 20px;
+    }
+    .product_info {
+        max-width: 100%;
+        align-items: center;
+    }
+    .main_info {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .product_block {
+        flex-direction: column;
+        gap: 24px;
+        padding: 40px 16px;
+    }
+    .tocart_button {
+        max-width: 100%;
+    }
 }
