@@ -229,3 +229,29 @@
         height: 32px;
     }
 }
+
+.user-location-input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 16px;
+    height: 32px;
+    border: 1px solid var(--white);
+    border-radius: 32px;
+    background-color: transparent;
+    font-family: var(--manrope);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--white);
+    width: fit-content; 
+    min-width: 120px;
+}
+
+.user-location-input .location-icon {
+    font-size: 20px;
+    color: var(--white);
+}
+
+.user-location-input .location-text {
+    white-space: nowrap;
+}

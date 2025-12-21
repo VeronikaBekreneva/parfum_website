@@ -1,15 +1,23 @@
-import { products } from "./product.js";
+// cart.js находится в js/modules/
+import { products } from "./product.js";              // продукт в той же папке modules
+// cart.js
+import { getCartByLS, saveCartByLS, addProductToCartByLS } from "./api/local-storage.js";
 
-const cart = JSON.parse(localStorage.getItem("cart")) || {};
 
+// 🔹 ИНИЦИАЛИЗАЦИЯ КОРЗИНЫ ИЗ LOCAL STORAGE
+const cart = getCartByLS();
+
+/**
+ * Универсальная функция сохранения корзины
+ */
 function saveCart() {
-    localStorage.setItem("cart", JSON.stringify(cart));
+    saveCartByLS(cart);
     renderCart();
 
     const addBtn = document.querySelector(".tocart_button[data-product-id]");
     if (addBtn) {
         const id = String(addBtn.dataset.productId);
-        if (products[id]) renderCartButton(addBtn, id);
+        renderCartButton(addBtn, id);
     }
 }
 
@@ -193,6 +201,15 @@ function renderCart() {
 }
 
 function initCart() {
+    // Временный блок для проверки работы localStorage
+    console.log('Cart before adding:', getCartByLS());
+
+    // Добавляем тестовый товар
+    addProductToCartByLS({id: 999, name: 'Test Product', price: 100});
+
+    console.log('Cart after adding:', getCartByLS());
+
+    // ===== Дальше твой обычный initCart код =====
     const cartBtns = document.querySelectorAll(".menu_cart_btn, .mobile_cart_btn");
     const cartOverlay = document.getElementById("cart-overlay");
     const cartModal = document.getElementById("cart-modal");
