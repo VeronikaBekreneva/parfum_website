@@ -17,7 +17,7 @@ export const products = {
     desc: "A rich bouquet of strongly floral aromas, capturing the essence of a vibrant garden in full bloom.",
     shortDesc: "STRONGLY FLORAL",
     price: 39.95,
-    imgs: ["../src/images/jardinea.png", "../src/images/meadow2.png"],
+    imgs: ["../src/images/Jardinea.png", "../src/images/meadow2.png"],
     notes: "Top: Rose, Peony | Middle: Violet, Jasmine | Base: Sandalwood, Amber",
     ingredients: "Alcohol Denat., Aqua, Parfum, Limonene, Citronellol",
     quantity: 10,
