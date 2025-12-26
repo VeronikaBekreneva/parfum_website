@@ -7,7 +7,8 @@ import { initCart} from './modules/cart.js';
 import { initMobileMenu } from "./modules/MobileMenu.js";
 import { initNavigation } from "./modules/navigation.js";
 import { getUserLocation } from "./modules/api/geolocation.js";
-
+import { initQuotes } from './modules/api/quotes.js';
+import { initReactions } from './modules/reactions.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     initMobileMenu();
@@ -19,4 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
     initCart();
     initNavigation();
     getUserLocation();
+    initQuotes();
+    initReactions();
 });

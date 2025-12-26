@@ -1,0 +1,87 @@
+.quote-section {
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.quote-header {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    color: #444;
+}
+
+.quote-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #f7f7f7;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    max-width: 600px;
+}
+
+#quote-text {
+    font-size: 1.25rem;
+    color: #222;
+    margin: 0;
+    flex: 1;
+}
+
+.button_quote {
+    font-size: 1.5rem;
+    background-color: #e0f5e9;
+    border: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.button_quote:hover {
+    transform: rotate(20deg);
+}
+
+#quote-text {
+    transition: opacity 0.25s ease, transform 0.25s cubic-bezier(.2,.8,.2,1);
+}
+.quote-fade-out {
+    opacity: 0;
+    transform: translateY(5px);
+}
+
+.quote-fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.flower-icon {
+    width: 22px;
+    height: 22px;
+    margin-left: 6px;
+    vertical-align: middle;
+
+    filter: brightness(0) saturate(100%)
+            invert(52%) sepia(96%)
+            saturate(748%) hue-rotate(359deg)
+            brightness(103%) contrast(102%);
+}
+
+.button_quote,
+.button_like {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.button_quote:hover,
+.button_like:hover {
+    transform: scale(1.15);
+}
+
+.button_like:disabled {
+    opacity: 0.5;
+    cursor: default;
+}

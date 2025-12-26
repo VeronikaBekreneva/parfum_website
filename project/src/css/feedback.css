@@ -1,0 +1,60 @@
+#shop-feedback {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff5f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+#shop-feedback h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #DD6249;
+}
+
+.reactions {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.reaction-btn {
+    background-color: #fff;
+    border: 2px solid #DD6249;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, background-color 0.2s, color 0.2s;
+    position: relative;
+}
+
+.reaction-btn:hover {
+    transform: scale(1.2);
+    background-color: #DD6249;
+    color: #fff;
+}
+
+.reaction-count {
+    font-size: 0.8rem;
+    margin-top: 2px;
+    color: #333;
+}
+
+.reaction-clicked {
+    animation: pop 0.3s ease forwards;
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+}
