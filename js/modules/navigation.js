@@ -24,7 +24,7 @@ function setupScrollLink(selector, targetId) {
 }
 
 function goToShop() {
-    window.location.href = "src/shop.html";
+    window.location.href = "project/src/shop.html";
 }
 
 export function initNavigation() {
